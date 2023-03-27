@@ -1,0 +1,15 @@
+<button 
+    class="btn"
+    [ngStyle]="{'background-color':color}"
+    (click)="onClick()"
+>
+{{ text }}
+</button>
+
+<!-- 
+This is a reusable button that is share across the application. 
+the style directive listens to the input color. 
+The text also listens to the input text from other components.
+The click event is an output eventemitter. It Upon clicking, it will emit an event that will be acted upon by the respective component 
+ 
+-->
