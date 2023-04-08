@@ -1,3 +1,4 @@
-<app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)" (onToggleReminder)="toggleReminder(task)"></app-task-item>
 
 <!-- Since we are binding property task to this specific component. Each task item mentioned will be its own component, we bound each task to its own component. Now we go define the component task-item what it should look like -->
